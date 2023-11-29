@@ -1,0 +1,12 @@
+---PULL REQUEST---
+yüklenen iki branchi inceleyip aradaki farkları gözden geçiriyor ve burada merge etmemize ters olabilecek bir durum olup olmadığına bakıyor çakışma durumu söz konusu değilse bunu merge edebilirsin diyor ve burada senden merge etme durumunda bir mesaj girmeni bekliyor. bu mesaj kodun sahibine gidiyor burada bu işleiğ yapabilirsin yapabilirsin aslında diyerek ona bir öneride bulunmuş oluyoruz. bu öneri pull request kısmında görünmeye devam eder biz girip buradan bu öneri hakkında bir işlem yapmadığımız sürece burada durmaya devam eder. işlemi gerçekleştirip merge edeceğiz.
+bu işlemleri biz github üzerinden yaptık yani şuanda github repomuz bizim bilgisayarda bulunan repomuzdan bir adım önde oldu bunları senkron etmemiz gerekli yoksa sorun alırız.
+git branch -r yaparak remote branchleri görüntüleyebiliriz.
+git fetch origin master: fetch yapılan değişiklikleri alıp getirecek nereden origin de olan github repomun url'inden ve hangi değişiklik masterdaki değişiklik.
+bu işlemden sonra git status çalıştırdığımda bana senin masterın origin/master'dan geride fast forward yapabilirisin ifadesi çıkıyor.
+şimdi burada ben origin/master a geömek için git switch kullanamıyorum bunu kabul etmiyor. 
+git checkout origin/master şeklinde yapmam gerkiyor bu durumda da detached head uyarısı alıyorum ne yapman gerektiğini seçip ona göre yol izleyebilirisn eski konulara bakarak. bu kısımlara bakarak benim bu projeyi kendi projeme aktardığımda bir sıkıntıyla karşılaşmayacağımı biliyorsam git status çalıştırıp 
+burada gösterdiği gibi git pull kullanablirim.
+git pull= git fetch+ git merge
+github reposundan değişiklikleri getir ve bunları benim projemle merge et. sıkıntı olmadığından emin ol
+git pull origin master. şeklinde git pull çalıştırıldı.

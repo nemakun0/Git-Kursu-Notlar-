@@ -1,0 +1,15 @@
+---REPOYU ALMAK---
+başkasının reposunu almak için sayfasına girip code kısmında verilen url yi kopyala temrminalde 
+git clone repo_url yaz bu dosyaları bilgisayrımıza klonlar.
+
+fork: hesaba kopyalanıyor senden kendimi ayırıyorum ben yoluma kendi başıma devam edeceğim yaptığım değişiklikleri kendi repomdan devam ettireceğim
+başkasının  dosyalarını geliştirip direk push edemem çünkü buna iznim yok
+
+---FORK---
+frok ile tamamen kendime aldım başkasının projesini
+içerisinde değişiklik yapıp bu değişikliklşeri git push origin master diyerek kendi repoma yolladım değişiklikleri.
+benim profilimden contirbute seçeneği çıkıyor.pull request açılıyor buraya istek atmak için bir mesaj yazıp gönderiyoruz.
+comment: diyip ekleme yapmasını isteyerek geri gönderebilirim
+approve: onaylarım
+isterse karşı taraf merge edebilir. 
+close pull request diyip bunu kapatabilir. buraya mesaj yazarak gönderebilirim

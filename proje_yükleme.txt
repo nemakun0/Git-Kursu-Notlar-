@@ -1,0 +1,14 @@
+---GİTHUB'A PROJE KOYMAK---
+github profiline girip burada sağ üstteki + içinden new repository diyoruz
+istenilen repo adı verilebilir.
+public: herkes tarafından görülebilir, istediğin kişilerin değiştirmesine olanak verebilirsin
+private: kodlar herkes tarafından görüntülenemez belirlediğim kişiler tarafından görülebilir.
+create repository dediğimizde çıkan sayfadda en üstte bir URL oluşturuluyor bu biizm repomuzun URL'si
+oluşturduğumuz projeyi yüklemek için:
+git remote add origin repo_URL:repo url ye origin adını verdik burada bundan sonra origin dediğimizde url algılanacak.
+git push -u origin master: bu kodu girdiğimizde deosyamızı push edecek ancak bir defaya mahsus sign in olmamızı isteyecek
+bu işlem sonunda projem githuba yüklenmiş olacak
+yeni bir branch oluşturup bunu da github'a yükleyebiliriz. oluştuurp commit attıktan sonra herhangi bir birleştirme işlemi yapmadan (branchleri) bunu paylaşabiliriz.
+git remote dediğimizde origin çıkacak bu yan branchin içindeyken de masterda yaptığım işlemi yapabilirim anlamına geliyor.
+git push origin branch_name
+şeklinde branchimi githuba push edebilirim.
