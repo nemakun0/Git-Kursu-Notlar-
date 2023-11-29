@@ -1,0 +1,32 @@
+GEÇMİŞE DÖNME
+
+---CHECKOUT---
+commit attıktan sonra nasıl geri döneriz
+commit ettikten sonra içimize sinmeyen bir şey oldu ve eski commite dönmek istedik bunun için dönmek istediğimiz commitin hash i lazım(git log da çıkan ID tipli şey)bunu kopyalayalım
+git checkout hashNo yazarak eski branche döneriz ancak burada detached head uyarısı alırız bu uyarı şunu gösterir senin headin önceki branche geldi ama masterın hala bir sonraki branchte. beğenmediğim branch varlığını sürdürmeye devam ediyor. 
+bu işlemden kurtulmak için yeni bir branch headimizi ona aktarır ve buradan geliştirmeye devam ederiz. mastera dönmek istediğimizde dönebiliriz ve bu herhani bir hataya neden olmaz.
+
+---RESET VS REVERT---
+öyle bir eski commite dönmek istiyorum ki örneğin 4. 5. 6. commitler olsun ben 4. commite dönmek istiyorum ve buna dönerken 5 ile 6 nın tamamen kaybolmasını istiyorum.
+git reset hashNo: commitleri siliyor ancak içeriklere dokunmuyor metin dosyasındaki satırları silmiyor gibi
+git reset --hard bashNo: commitleri ve içerikleri komple siliyor.
+commitlerden kurtulmak istiyorum ve 4. committen devam etmek istiyorum ama olanlar da silinmesin istiyorum üstüne üstlük bir de aynı branchten devam etmek istiyorum
+5. ve 6. commit silinecek ama ve yeni bir commit oluşturacak bu committe master olarak devam edecek
+git revert (geriye almak istedğim commitin IDsi) 
+burada bizden commit mesajı isteyecek çünkü yeni bir commit oluşturacak ve bunu revert etmek istediğimiz commiti geriye alarak yapacak 
+git log da görünmeye devam ediyor ancak içerik olarak silindi. fiziki olarak 4. commite dönmedi ancak içerik olarak 4. committen devam ediyor.
+başka birisiyle aynı proje üzerinde çalışıyorsak direk silme işlemi bizim hikayelerimizde uyumsuzluk oluşturacağından hata verecektir ancak bu şekilde revert edilme durumunda hikayeler uyumlu olacak yalnızca içerik kullanım farkı olacaktır.gi
+
+---GİT DİFF---
+git diff: iki şey arasındaki farklar.
+git diff HEAD: son kaldığımız yani head ile işaretli olan kısım hakkında eskisi yenisi karşılaştırması yapacak.
+git diff hash1 hash2: yazarak iki commit arasındaki farkları görebilirim.iki hash arasında boşluk veya iki tane nokta kullanırız.
+git diff master feat: iki branch arasındaki farkları gösterir
+
+---REBASE---
+ana projeden ayrı bir branch oluşturup buradan yoluma devam ederken ben kendi içimde commitler atabilirim aynı zamanda ana projede de commitler atılmaya devam ediliyor olabilir ve bunlar benim yaptığım branchlerle çakışmıyor ve herhangi bir hata vermiyorsa ben ilerlerken ana projeyi kendiminkiyle birleştirip yoluma devam edebilirim yani benim branchimde yeni bir merge commiti oluşur. bu şekilde giderken ssürekli bir merge commit oluştu bu bizim tarihimizi kirletmiş oldu yani olması gerekenden fazla commit oluştu gibi düşünebiliriz. rebase yapmak yanı base i değiştirmek şu anlama geliyor masterdaki commitleri sıralayıp benim branchimdeki commitleri de bunun peşine sıralarım ve merge commitleri kaldırırım. doğru bir hizalama yaparım ancak bu bizim tarihlerimizi değiştirir ve  farklı bir kronoloji ile sıralanmasına sebebiyet verir bu da hatalara yol açabilir.
+asla kullnmamamız gereken durum;
+ben normalde commitlerimi yaptıkça paylaşıyorsam ve diğer insanlar benim projem üzerinde çalışıyorsa benim bir anda rebase etmem herkesin projesini bozar ancak ben son hale kadar paylşmadıysam ve en son rebase haliyle paylaştıysam kimsede bu proje olmadığından hiç kimseyi eytkilemeyecektir.
+git switch feat
+git rebase master
+feat'iniçinde git rebase master çalıştırdık master içindekileri sırayla dizdi sonra feat içindekileri sırayla dizdi.
