@@ -1,0 +1,2 @@
+---PRİVATE---
+private tanımlanan bir repo başkaları tarafından görüntülenmez yalnızca senin izin verdiklerin görebilir. bunun içinde github sayfamda private projeye tıklayıp sağ üstte çıkan settingse basıp sol yanda çıkan collaborators'a(işbirlikçileri) istediğimiz insanları email ile davetiye gönderebiliriz.bu dosya üzerinde değişiklik yapabilir artık benim çağırdığım kişiler.
