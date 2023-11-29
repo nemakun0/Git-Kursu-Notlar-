@@ -1,0 +1,43 @@
+
+GİT BRANCH
+---HEAD---
+master: ana branch'tir
+head: git içerisinde nerede olduğumuz gözteririr. son committe olma durumuda değişebilir. güncel olarak nerede olduğumuzu gösterir.
+
+---MERGE---
+git branch feat: feat adında yeni branch açılır.
+git merge feat : feat ile master branch'i birleştirir.
+head en son yapılan işlemde görünür.
+git branch: güncel oluşturulmuş bütün branchleri gösterir.
+branchler arası geçiş yapmak istediğimizde;
+git switch branch_adı
+
+---FAST FORWARD---
+fast forwarding: yan branch'te bir şeyler yapıp masterde hiçbir değişiklik yapılmadığı ve merge edilmesi durumuna denir.
+
+---MEREGE CONFLİCT---
+branchlerde aynı dosya üzerinde farklı işlemler yapıldığında merge conflict oldu uyarı veririr. bunun için istediğimiz işlemi seçmeliyiz. duracaksa birinden silinen kısım geri gelir ve sen bunu git add git commit edersin
+bundan sonra git merge diyip branch adını yazarsın.
+
+---STASH---
+branch de yaptığın değişiklikleri commit etmeden branch değiştirirsen bu yaptığın değişiklikler de seninle birlikte değişiklik yaptığın branche gelir ve orada gözükür.
+
+diğer branch ile master'da aynı dosyalar olduğunu varsay branch'te yaptığın değişiklikler masterde uygulanırsa bu bize sıkıntı çıkartır commit etmeden geçtik burayı unutma. git status yazdığında burada sana seçenek sunacak istersen masterdaki son haline dön diyecek burası git restore dosyaAdı şeklinde olacak ancak bunu yaptığında branchteki değişiklikler de kaybolacak.
+bunun olmaması için ;
+1- commit etmeye hazırsa etmek
+2- yapılan işlerden vazgeçmek bir üstte yapıp branchtekileri kaybetmemiz gibi
+3- stash yapmak
+bunları git saklayacak ve istediğimizde geri alabileceğiz
+commit yapmamak için git stash yazıyorum
+istediğim gibi branch değiştirebilirim.
+nasıl geri alacağız?
+stash yaptığımız yere geliyoruz buradan 
+ve burada git stash pop yazdığımızda bu kaydetmediğimiz değişiklikler geri geliyor.
+git stash list. güncel olarak saklanan kısımları listeler(ID olarak içerik görünmez)
+listelenme şu şekilde olabilir;
+stash@{0}: ....
+stash@{1}: ....
+bunlardan hangisini geri almak istiyorsak
+git stash apply stash@{0} şeklinde alabiliriz
+bütün stashleri silmek için git stash clear yazabiliriz.
+stashlere atılanlar başka branchlerde de kullanılabilir.
