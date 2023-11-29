@@ -1,0 +1,30 @@
+---GİT GÖRSELLEŞTİRME---
+commit: yaptığımız işleri nokta nokta kaydetmeye verdiğimiz addır. arayüz tasarlandı işim bitti kaydetip yeni kısmına geçiyorum.
+branch: aynı anda aynı proje üzerinde çalışabiliriz birden fazla kişi olarak.herkes farklı farklı noktaları geliştirip herkes kafasına göre commit atabilir. sonrasında birleşme yapılabilir.
+çalışma klasörü: içinde kaynak kodların oluduğu üzerinde çaıştığımız klasördür.
+     git add: bu komutla yazılan işi commitlemeden önce bunu sahneye almak için kullandık.
+index-staging:bekleme alanı
+     git commit: commit eden komut
+local repository:commitlenen dosyanın bulunduğu yer
+
+---GİT İNİT VE STATUS---
+git status: bulunulan klasörde git kullanılıp kullanılmadığını ve git durumunu gösterir.
+git init: klasörü git reposuna bağlar. giti başlatmış oldu.
+oluşum yapıldktan sonra git master yazıldığında hengi branch'te oludğun, hiç commit yapıp yapmadığın veya commit edielecek bir şey var mı gibi içerikleri gösterir.
+birden fazla kez init çalıştırma önce status'la kontrol et bir git reposuna bağlı olup olmadığını.
+ls -la: gizli dosyaları da listeler.
+bir yere git eklersek rm -rf komutuyla bunu da silebilirsin.
+---İLK COMMİT---
+oluşturulan klasörün içinde yapılan değişiklikler git status komutunda commit edilmemiş olarak görünür.burası bizim çalışma klasörümüz olur. 
+git add .....(eklenecek dosya adı)
+bu komutla hala commit atılmadı ancak stage'e çıkarılmış oldu.
+commit atmak için; git commit -m "gösterilmesini istediğin mesajı yaz" 
+bu şekilde commit edildikten sonra git status kontrolü yapıldığında commit edilecek herhangi bir şey görülmez.
+---GİT LOG---
+git log yazıldıktan sonra çıkan sayfada her commitin bir hash'i olur en başta bunu görürüz.
+yapan kişinin adı soyadıve commit atıldığı tarih görünür. 
+birden fazla dosyanın içeriğini değiştirdiğimizde her birini ayrı ayrı add etmek yerine 
+git add . diyerek bütün dosyalar için git add koumutu çalıştırılmış olur.
+son yapılan commit en üstte görünür ve yanında head yazar.
+---GİTİGNORE---
+touch .gitignore şeklinde bir dosya oluşturulur ve bu bizim isteidğimiz gizli.txt gibi bir dosyayı göntülenmesi kaldırılır. git status yazıldığında artık gizli.txt görünmez değişiklik yapıldığında bunlar da görünmez tamamen kendi sorumluluğunda olur.
