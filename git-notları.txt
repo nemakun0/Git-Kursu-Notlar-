@@ -1,0 +1,17 @@
+GİT VERSİYON KONTROLLERİ
+ls: içinde bulunulan klasörün içeriğini listeler
+pwd: güncel olarak içinde bulunduğumuz klasörü gösterir
+cd: içine girmek istediğimiz klasörünün adının önünde kullnarak girebiliriz.
+cd .. :bir önceki klasöre dön
+clear: ekranı temizler
+mkdir: klasör oluştur
+touch : bir dosya oluşturulur.(not.txt gibi)
+rm : oluşturulan dosyayı kaldırır
+rm -rf: klasörü siler
+EMAİL VE KULLANICI ADI EKLEME
+git config --global user.name"Emine Hatun ÇAKMAK": yeni bir kullanıcı adı tanımlar.
+git config user.name: tanımlanmış kullanıcı adının ne olduğunu gösterir.
+git config --global user.email .........@gmail.com
+
+linux editör ayarlama:
+git config --global core.editor "gedit --wait --new-window"
